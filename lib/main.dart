@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lesson107/utils/constants.dart';
 
 void main() => runApp(const MyApp());
 
@@ -22,17 +23,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: const Color(0xff1C0F0D),
+      backgroundColor: AppColors.backgrounColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xff1C0F0D),
+        backgroundColor: AppColors.backgrounColor,
         title: const AppbarTitleItem(),
         actions: const [
           AppBarActionItem(),
         ],
       ),
       body: const ScaffoldBody(),
-      bottomNavigationBar:const ScaffoldNavigationBar(),
+      bottomNavigationBar: const ScaffoldNavigationBar(),
     );
   }
 }
@@ -48,7 +49,7 @@ class AppbarTitleItem extends StatelessWidget {
         Text(
           "Hi! Alibek",
           style: TextStyle(
-            color: Color(0xFFFD5D69),
+            color: AppColors.redPinkMain,
             fontSize: 26,
           ),
         ),
@@ -110,7 +111,7 @@ class ScaffoldBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ListView(
+    return ListView(
       padding: const EdgeInsets.only(bottom: 150),
       children: [
         const Padding(
@@ -118,7 +119,7 @@ class ScaffoldBody extends StatelessWidget {
           child: Text(
             "Trending Recipe",
             style: TextStyle(
-              color: Color(0xffFD5D69),
+              color: AppColors.redPinkMain,
               fontSize: 15,
             ),
           ),
@@ -162,7 +163,7 @@ class ScaffoldBody extends StatelessWidget {
                             const Text(
                               "30min",
                               style: TextStyle(
-                                color: Color(0xffEC888D),
+                                color: AppColors.pinkSub,
                                 fontSize: 12,
                               ),
                             ),
@@ -186,7 +187,7 @@ class ScaffoldBody extends StatelessWidget {
                             const Text(
                               "5",
                               style: TextStyle(
-                                color: Color(0xffEC888D),
+                                color: AppColors.pinkSub,
                                 fontSize: 12,
                               ),
                             ),
@@ -224,7 +225,7 @@ class ScaffoldBody extends StatelessWidget {
                       height: 28,
                       width: 28,
                       decoration: const BoxDecoration(
-                        color: Color(0xffEC888D),
+                        color: AppColors.pinkSub,
                         shape: BoxShape.circle,
                       ),
                       child: Center(
@@ -246,7 +247,7 @@ class ScaffoldBody extends StatelessWidget {
           width: double.infinity,
           height: 255,
           decoration: BoxDecoration(
-            color: const Color(0xffFD5D69),
+            color: AppColors.redPinkMain,
             borderRadius: BorderRadius.circular(14),
           ),
           child: Column(
@@ -287,7 +288,7 @@ class ScaffoldBody extends StatelessWidget {
                             height: 28,
                             width: 28,
                             decoration: const BoxDecoration(
-                              color: Color(0xffFD5D69),
+                              color: AppColors.redPinkMain,
                               shape: BoxShape.circle,
                             ),
                             child: Center(
@@ -322,7 +323,7 @@ class ScaffoldBody extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xff1C0F0D),
+                                      color: AppColors.backgrounColor,
                                     ),
                                   ),
                                   const SizedBox(height: 3),
@@ -330,7 +331,7 @@ class ScaffoldBody extends StatelessWidget {
                                     children: [
                                       const Text(
                                         "5",
-                                        style: TextStyle(color: Color(0xffEC888D), fontSize: 12),
+                                        style: TextStyle(color: AppColors.pinkSub, fontSize: 12),
                                       ),
                                       const SizedBox(width: 3),
                                       SvgPicture.asset(
@@ -349,7 +350,7 @@ class ScaffoldBody extends StatelessWidget {
                                         '15min',
                                         style: TextStyle(
                                           fontSize: 12,
-                                          color: Color(0xffEC888D),
+                                          color: AppColors.pinkSub,
                                         ),
                                       ),
                                     ],
@@ -381,7 +382,7 @@ class ScaffoldBody extends StatelessWidget {
                             height: 28,
                             width: 28,
                             decoration: const BoxDecoration(
-                              color: Color(0xffFD5D69),
+                              color: AppColors.redPinkMain,
                               shape: BoxShape.circle,
                             ),
                             child: Center(
@@ -416,7 +417,7 @@ class ScaffoldBody extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xff1C0F0D),
+                                      color: AppColors.backgrounColor,
                                     ),
                                   ),
                                   const SizedBox(height: 3),
@@ -424,7 +425,7 @@ class ScaffoldBody extends StatelessWidget {
                                     children: [
                                       const Text(
                                         "5",
-                                        style: TextStyle(color: Color(0xffEC888D), fontSize: 12),
+                                        style: TextStyle(color: AppColors.pinkSub, fontSize: 12),
                                       ),
                                       const SizedBox(width: 3),
                                       SvgPicture.asset(
@@ -443,7 +444,7 @@ class ScaffoldBody extends StatelessWidget {
                                         '15min',
                                         style: TextStyle(
                                           fontSize: 12,
-                                          color: Color(0xffEC888D),
+                                          color: AppColors.pinkSub,
                                         ),
                                       ),
                                     ],
@@ -470,7 +471,7 @@ class ScaffoldBody extends StatelessWidget {
               child: Text(
                 "Top Chef",
                 style: TextStyle(
-                  color: Color(0xffFD5D69),
+                  color: AppColors.redPinkMain,
                   fontSize: 15,
                 ),
               ),
@@ -555,7 +556,7 @@ class ScaffoldBody extends StatelessWidget {
             )
           ],
         ),
-        const SizedBox(height: 5),
+        const SizedBox(height: 15),
         Column(
           children: [
             const Row(
@@ -565,7 +566,7 @@ class ScaffoldBody extends StatelessWidget {
                   child: Text(
                     "Recently Added",
                     style: TextStyle(
-                      color: Color(0xffFD5D69),
+                      color: AppColors.redPinkMain,
                       fontSize: 15,
                     ),
                   ),
@@ -574,9 +575,9 @@ class ScaffoldBody extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const SizedBox(width: 8),
+                const SizedBox(width: 1),
                 Stack(
                   clipBehavior: Clip.none,
                   children: [
@@ -614,7 +615,7 @@ class ScaffoldBody extends StatelessWidget {
                                   const Text(
                                     "4",
                                     style: TextStyle(
-                                      color: Color(0xffEC888D),
+                                      color: AppColors.pinkSub,
                                       fontSize: 12,
                                     ),
                                   ),
@@ -634,7 +635,7 @@ class ScaffoldBody extends StatelessWidget {
                                   const Text(
                                     '30min',
                                     style: TextStyle(
-                                      color: Color(0xffEC888D),
+                                      color: AppColors.pinkSub,
                                       fontSize: 12,
                                     ),
                                   )
@@ -664,7 +665,7 @@ class ScaffoldBody extends StatelessWidget {
                               height: 28,
                               width: 28,
                               decoration: const BoxDecoration(
-                                color: Color(0xffEC888D),
+                                color: AppColors.pinkSub,
                                 shape: BoxShape.circle,
                               ),
                               child: Center(
@@ -716,9 +717,9 @@ class ScaffoldBody extends StatelessWidget {
                               Row(
                                 children: [
                                   const Text(
-                                    "5",
+                                    "4",
                                     style: TextStyle(
-                                      color: Color(0xffEC888D),
+                                      color: AppColors.pinkSub,
                                       fontSize: 12,
                                     ),
                                   ),
@@ -736,9 +737,9 @@ class ScaffoldBody extends StatelessWidget {
                                   ),
                                   const SizedBox(width: 5),
                                   const Text(
-                                    '20min',
+                                    '30min',
                                     style: TextStyle(
-                                      color: Color(0xffEC888D),
+                                      color: AppColors.pinkSub,
                                       fontSize: 12,
                                     ),
                                   )
@@ -768,7 +769,7 @@ class ScaffoldBody extends StatelessWidget {
                               height: 28,
                               width: 28,
                               decoration: const BoxDecoration(
-                                color: Color(0xffEC888D),
+                                color: AppColors.pinkSub,
                                 shape: BoxShape.circle,
                               ),
                               child: Center(
@@ -799,7 +800,7 @@ class ScaffoldNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Align(
+    return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
         width: 281,
@@ -821,5 +822,3 @@ class ScaffoldNavigationBar extends StatelessWidget {
     );
   }
 }
-
-
